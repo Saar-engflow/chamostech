@@ -1,15 +1,14 @@
 'use client';
 
-import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, easeOut } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { BackgroundPaths } from "@/components/ui/background-paths";
 import { Counter } from "@/components/ui/counter";
 import { ServiceCarousel, type Service } from "@/components/ui/services-card";
-import { StaggerSpecialties, type Specialty } from "@/components/ui/stagger-specialties";
+import { StaggerSpecialties, type SpecialtyItem } from "@/components/ui/stagger-specialties";
 import { Testimonials } from "@/components/ui/testimonials-columns-1";
 import { BlogSection } from "@/components/ui/blog-section";
 import { ContactSection } from "@/components/ui/contact-section";
@@ -17,29 +16,32 @@ import { ChevronRight, MapPin, Phone, Mail, MessageCircle } from 'lucide-react';
 
 // Reusable animation variants
 const sectionVariants = {
-  hidden: { opacity: 0, y: 50 },
+  hidden: { opacity: 0, y: 50, x: 0 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" }
+    x: 0,
+    transition: { duration: 0.6, ease: easeOut }
   }
 };
 
 const leftVariant = {
-  hidden: { opacity: 0, x: -50 },
+  hidden: { opacity: 0, x: -50, y: 0 },
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.6, ease: "easeOut" }
+    y: 0,
+    transition: { duration: 0.6, ease: easeOut }
   }
 };
 
 const rightVariant = {
-  hidden: { opacity: 0, x: 50 },
+  hidden: { opacity: 0, x: 50, y: 0 },
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.6, ease: "easeOut" }
+    y: 0,
+    transition: { duration: 0.6, ease: easeOut }
   }
 };
 
