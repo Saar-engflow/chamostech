@@ -645,14 +645,10 @@ const DashboardOverview = ({ onSectionChange }: { onSectionChange: (s: Section) 
                       onClick={() => isRequest ? onSectionChange('Client Requests') : onSectionChange('Blogs')}
                     >
                       <div className={`p-2 rounded-lg ${
-                        color === 'green' ? 'bg-green-50 dark:bg-green-900/20' :
-                        color === 'blue' ? 'bg-blue-50 dark:bg-blue-900/20' :
                         color === 'purple' ? 'bg-purple-50 dark:bg-purple-900/20' :
                         'bg-orange-50 dark:bg-orange-900/20'
                       }`}>
                         <Icon className={`h-4 w-4 ${
-                          color === 'green' ? 'text-green-600 dark:text-green-400' :
-                          color === 'blue' ? 'text-blue-600 dark:text-blue-400' :
                           color === 'purple' ? 'text-purple-600 dark:text-purple-400' :
                           'text-orange-600 dark:text-orange-400'
                         }`} />
