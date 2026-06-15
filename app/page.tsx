@@ -126,13 +126,13 @@ export default function Home() {
     <div className="flex min-h-screen flex-col">
       {/* Navbar */}
       <header className="sticky top-0 z-50 w-full flex justify-center pointer-events-none">
-        <div className={`flex items-center justify-between px-6 py-3 transition-all duration-500 ease-in-out pointer-events-auto border ${
+        <div className={`flex items-center justify-between px-4 sm:px-6 py-3 transition-all duration-500 ease-in-out pointer-events-auto border overflow-hidden ${
           isScrolled 
             ? 'mt-4 w-[90%] max-w-5xl bg-white/70 dark:bg-bg-dark/70 backdrop-blur-xl border-white/40 dark:border-white/10 rounded-full shadow-2xl py-2' 
             : 'mt-0 w-full max-w-7xl bg-transparent border-transparent'
         }`}>
-          <div className="flex items-center gap-3">
-            <div className="relative h-10 w-10 overflow-hidden rounded-lg">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <div className="relative h-9 w-9 sm:h-10 sm:w-10 overflow-hidden rounded-lg">
               <Image
                 src="/chamos-tech-logo.jpeg"
                 alt="Chamos Tech Logo"
@@ -141,7 +141,7 @@ export default function Home() {
                 priority
               />
             </div>
-            <span className="text-xl font-bold tracking-tight text-bg-dark dark:text-text-primary">
+            <span className="text-lg sm:text-xl font-bold tracking-tight text-bg-dark dark:text-text-primary">
               CHAMOS<span className="text-primary-orange">TECH</span>
             </span>
           </div>
@@ -161,7 +161,7 @@ export default function Home() {
             </nav>
           <div className="flex items-center">
             <Link href="#contact">
-              <Button>Get Started</Button>
+              <Button className="text-xs sm:text-sm px-3 sm:px-4">Get Started</Button>
             </Link>
           </div>
         </div>

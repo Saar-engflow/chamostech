@@ -78,9 +78,9 @@ export function ContactSection() {
                 <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-primary-blue">
                   <Mail className="w-6 h-6" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <p className="font-bold text-text-dark text-lg mb-1">Email</p>
-                  <a href="mailto:chamosdistributionltd@gmail.com" className="text-gray-600 hover:text-primary-blue transition-colors">
+                  <a href="mailto:chamosdistributionltd@gmail.com" className="text-gray-600 hover:text-primary-blue transition-colors break-all">
                     chamosdistributionltd@gmail.com
                   </a>
                 </div>
@@ -91,7 +91,7 @@ export function ContactSection() {
                 <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-primary-blue">
                   <Phone className="w-6 h-6" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <p className="font-bold text-text-dark text-lg mb-1">Phone</p>
                   <div className="flex flex-col gap-1 text-gray-600">
                     <a href="tel:0766562299" className="hover:text-primary-blue transition-colors">0766562299</a>
@@ -105,7 +105,7 @@ export function ContactSection() {
                 <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-green-50 border border-green-100 flex items-center justify-center text-green-600">
                   <MessageCircle className="w-6 h-6" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <p className="font-bold text-text-dark text-lg mb-1">WhatsApp</p>
                   <a href="https://wa.me/260766562299" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-green-600 transition-colors">
                     +260 766562299
@@ -118,7 +118,7 @@ export function ContactSection() {
                 <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-primary-blue">
                   <MapPin className="w-6 h-6" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <p className="font-bold text-text-dark text-lg mb-1">Office</p>
                   <p className="text-gray-600">
                     Lusaka, Zambia
@@ -131,7 +131,7 @@ export function ContactSection() {
                 <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-primary-blue">
                   <Clock className="w-6 h-6" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <p className="font-bold text-text-dark text-lg mb-1">Business Hours</p>
                   <p className="text-gray-600">
                     Mon - Fri: 08:00 - 17:00<br />
