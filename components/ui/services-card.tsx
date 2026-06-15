@@ -4,9 +4,7 @@ import * as React from "react";
 import { motion, useInView } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
-import useEmblaCarousel, {
-  type EmblaCarouselType,
-} from "embla-carousel-react";
+import useEmblaCarousel from "embla-carousel-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
@@ -19,7 +17,7 @@ export interface Service {
 }
 
 // --- Carousel Context ---
-type CarouselApi = EmblaCarouselType | undefined;
+type CarouselApi = ReturnType<typeof useEmblaCarousel>[1];
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;
 type CarouselOptions = UseCarouselParameters[0];
 type CarouselPlugin = UseCarouselParameters[1];
