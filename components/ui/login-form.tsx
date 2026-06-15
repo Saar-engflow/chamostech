@@ -239,7 +239,7 @@ export function LoginForm() {
         console.error('Admin check error:', adminError);
         // If not in admins table, sign out and throw error
         await supabase.auth.signOut();
-        throw new Error('Your account is not authorized as admin. Please make sure you are added to the admins table in Supabase.');
+        throw new Error('Invalid credentials. Please check your email and password or contact support for assistance.');
       }
 
       console.log('Admin check successful!');
