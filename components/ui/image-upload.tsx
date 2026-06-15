@@ -19,6 +19,7 @@ export function ImageUpload({ onImageChange, className }: ImageUploadProps) {
     fileInputRef,
     handleThumbnailClick,
     handleFileChange,
+    handleFile,
     handleRemove,
   } = useImageUpload({
     onUpload: (url) => {
@@ -53,16 +54,11 @@ export function ImageUpload({ onImageChange, className }: ImageUploadProps) {
 
       const file = e.dataTransfer.files?.[0]
       if (file && file.type.startsWith("image/")) {
-        const fakeEvent = {
-          target: {
-            files: [file],
-          },
-        } as React.ChangeEvent<HTMLInputElement>
-        handleFileChange(fakeEvent)
+        handleFile(file)
         onImageChange?.(file);
       }
     },
-    [handleFileChange, onImageChange],
+    [handleFile, onImageChange],
   )
 
   const handleFileChangeWithCallback = (e: React.ChangeEvent<HTMLInputElement>) => {
