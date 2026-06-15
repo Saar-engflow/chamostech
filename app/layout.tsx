@@ -30,6 +30,7 @@ const poppins = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://chamostech.com"),
   title: {
     default: "Chamos Tech | Custom Software Solutions",
     template: "%s | Chamos Tech",
